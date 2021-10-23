@@ -1,6 +1,5 @@
 package person_manager_full.menu;
 
-import person_manager_full.menu.MenuService;
 import person_manager_full.model.Student;
 import person_manager_full.service.impl.PersonServiceImpl;
 import person_manager_full.service.impl.StudentServiceImpl;
@@ -23,58 +22,57 @@ public class MenuStudent extends MenuService {
         return studentService1;
     }
 
-    public void sortIncrease() {
+    public void sortIncreaseStudent() {
         StudentServiceImpl student2 = createStudentList(personService);
         student2.sortIncrease();
         student2.print();
 
     }
-    public void sortDecrease() {
+    public void sortDecreaseStudent() {
         StudentServiceImpl student3 = createStudentList(personService);
         student3.sortDecrease();
         student3.print();
 
     }
-    public int getSumScore() {
+    public int getSumScoreStudent() {
         StudentServiceImpl student1 = createStudentList(personService);
         return  student1.getSumScore();
     }
-
     public void menuOption() {
         int choice = -1;
         while (choice != 0) {
             showMenu();
             Scanner scanner = new Scanner(System.in);
             choice = scanner.nextInt();
-                switch (choice) {
-                    case 1:
-                        addObject();
-                        break;
-                    case 2:
-                        printObject();
-                        break;
-                    case 3:
-                        deleteObject();
-                        break;
-                    case 4:
-                        editObject();
-                        break;
-                    case 5:
-                        findObject();
-                        break;
-                    case 6:
-                        sortIncrease();
-                        break;
-                    case 7:
-                        sortDecrease();
-                        break;
-                    case 8:
-                        System.out.println("Tổng điểm: " + getSumScore());
-                        break;
-                    case 0:
-                        System.exit(0);
-                    default:
-                        System.out.println("Không có tùy chọn!");
+            switch (choice) {
+                case 1:
+                    addObject();
+                    break;
+                case 2:
+                    printObject();
+                    break;
+                case 3:
+                    deleteObject();
+                    break;
+                case 4:
+                    editObject();
+                    break;
+                case 5:
+                    findObject();
+                    break;
+                case 6:
+                    sortIncreaseStudent();
+                    break;
+                case 7:
+                    sortDecreaseStudent();
+                    break;
+                case 8:
+                    System.out.println("Tổng điểm: " + getSumScoreStudent());
+                    break;
+                case 0:
+                    System.exit(0);
+                default:
+                    System.out.println("Không có tùy chọn!");
             }
         }
     }

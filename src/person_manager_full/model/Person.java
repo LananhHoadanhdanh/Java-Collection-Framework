@@ -24,6 +24,10 @@ public class Person {
         return personalId;
     }
 
+    public void setPersonalId(int personalId) {
+        this.personalId = personalId;
+    }
+
     public String getName() {
         return name;
     }

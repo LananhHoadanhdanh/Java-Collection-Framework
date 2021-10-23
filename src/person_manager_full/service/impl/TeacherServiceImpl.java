@@ -11,6 +11,15 @@ public class TeacherServiceImpl extends PersonServiceImpl{
     public TeacherServiceImpl() {
         teacherList = new ArrayList<>();
     }
+
+    public ArrayList<Teacher> getTeacherList() {
+        return teacherList;
+    }
+
+    public void setTeacherList(ArrayList<Teacher> teacherList) {
+        this.teacherList = teacherList;
+    }
+
     public static Teacher createTeacher() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập tuổi: ");
