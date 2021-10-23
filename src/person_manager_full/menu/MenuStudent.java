@@ -1,5 +1,6 @@
-package person_manager_full;
+package person_manager_full.menu;
 
+import person_manager_full.menu.MenuService;
 import person_manager_full.model.Student;
 import person_manager_full.service.impl.PersonServiceImpl;
 import person_manager_full.service.impl.StudentServiceImpl;
@@ -50,13 +51,13 @@ public class MenuStudent extends MenuService {
                         addObject();
                         break;
                     case 2:
-                        printProject();
+                        printObject();
                         break;
                     case 3:
-                        deleteProject();
+                        deleteObject();
                         break;
                     case 4:
-                        editProject();
+                        editObject();
                         break;
                     case 5:
                         findObject();

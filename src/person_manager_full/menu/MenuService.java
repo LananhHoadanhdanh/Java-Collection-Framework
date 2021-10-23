@@ -1,4 +1,4 @@
-package person_manager_full;
+package person_manager_full.menu;
 
 import person_manager_full.model.Person;
 import person_manager_full.model.Student;
@@ -49,16 +49,16 @@ public class MenuService {
         }
     }
 
-    public void printProject() {
+    public void printObject() {
         personService.print();
     }
-    public void deleteProject() {
+    public void deleteObject() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập id của học sinh cần xóa: ");
         int deleteId = scanner.nextInt();
         personService.deleteById(deleteId);
     }
-    public void editProject() {
+    public void editObject() {
         System.out.print("Nhập id của thành viên cần sửa: ");
         Scanner scanner = new Scanner(System.in);
         int editId = scanner.nextInt();

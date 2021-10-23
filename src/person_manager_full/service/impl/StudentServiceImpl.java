@@ -46,7 +46,7 @@ public class StudentServiceImpl extends PersonServiceImpl {
         System.out.println("___________________________");
     }
 
-    public Person getElement(int index) {
+    public Student getElement(int index) {
         return studentList.get(index);
     }
 
@@ -60,5 +60,10 @@ public class StudentServiceImpl extends PersonServiceImpl {
         System.out.print("Nhập điểm trung bình: ");
         int averageScore = scanner.nextInt();
         return new Student(name, age, averageScore);
+    }
+
+    @Override
+    public int size() {
+        return studentList.size();
     }
 }

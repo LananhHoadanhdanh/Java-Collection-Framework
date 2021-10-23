@@ -22,4 +22,5 @@ public class TeacherServiceImpl extends PersonServiceImpl{
         String subject = scanner.nextLine();
         return new Teacher(name, age, subject);
     }
+
 }

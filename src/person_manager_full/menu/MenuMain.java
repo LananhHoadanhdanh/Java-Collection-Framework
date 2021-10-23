@@ -1,4 +1,4 @@
-package person_manager_full;
+package person_manager_full.menu;
 
 public class MenuMain {
     public static void main(String[] args) {
