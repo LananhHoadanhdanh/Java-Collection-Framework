@@ -2,6 +2,7 @@ package bai_TH_Product.service.impl;
 
 import bai_TH_Product.model.Product;
 import bai_TH_Product.service.GeneralService;
+import tuDien_use_HashMap.Dictionary;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -17,12 +18,23 @@ public class ProductService implements GeneralService<Product> {
         this.arrayList = arrayList;
     }
 
+    public static void printFullLine() {
+        System.out.print("+");
+        Dictionary.printLine(5);Dictionary.printLine(10);Dictionary.printLine(10);
+        System.out.println();
+    }
+
+
+
     @Override
     public void print() {
+        printFullLine();
+        System.out.printf("|%-5s|%-10s|%-10s|%n","ID","Name","Price");
+        printFullLine();
         for (int i = 0; i < arrayList.size(); i++) {
             System.out.println(arrayList.get(i));
         }
-        System.out.println("___________________________");
+        printFullLine();
     }
 
     @Override

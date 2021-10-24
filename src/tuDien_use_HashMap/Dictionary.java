@@ -47,7 +47,7 @@ public class Dictionary {
 
     }
 
-    public void printLine(int space) {
+    public static void printLine(int space) {
         for (int i = 0; i <= space; i++) {
             if (i == space) {
                 System.out.print("+");
@@ -56,7 +56,7 @@ public class Dictionary {
             }
         }
     }
-    public void printFullLine() {
+    public static void printFullLine() {
         System.out.print("+");printLine(20);printLine(25);
         System.out.println();
     }
