@@ -6,10 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
         Dictionary dictionary = new Dictionary();
+        //dictionary.add();
         dictionary.print();
-        dictionary.add();
-        dictionary.print();
-        dictionary.search();
+        //dictionary.search();
     }
 
 }

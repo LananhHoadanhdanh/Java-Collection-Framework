@@ -47,12 +47,29 @@ public class Dictionary {
 
     }
 
+    public void printLine(int space) {
+        for (int i = 0; i <= space; i++) {
+            if (i == space) {
+                System.out.print("+");
+            } else {
+                System.out.print("-");
+            }
+        }
+    }
+    public void printFullLine() {
+        System.out.print("+");printLine(20);printLine(25);
+        System.out.println();
+    }
+
     public void print() {
         Set<String> keys = myDictionary.keySet();
+        printFullLine();
+        System.out.printf("|%-20s|%-25s|%n", "English", "Vietnamese");
+        printFullLine();
         for (String key : keys) {
-            System.out.println(key + ": " + myDictionary.get(key));
+            System.out.printf("|%-20s|%-25s|%n",key,myDictionary.get(key));
         }
-        System.out.println("__________________________");
+        printFullLine();
     }
 
     public String typePhrase(){
