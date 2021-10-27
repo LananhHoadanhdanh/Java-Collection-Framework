@@ -31,8 +31,8 @@ public class ProductService implements GeneralService<Product> {
         printFullLine();
         System.out.printf("|%-5s|%-10s|%-10s|%n","ID","Name","Price");
         printFullLine();
-        for (int i = 0; i < arrayList.size(); i++) {
-            System.out.println(arrayList.get(i));
+        for (Product product : arrayList) {
+            System.out.println(product);
         }
         printFullLine();
     }

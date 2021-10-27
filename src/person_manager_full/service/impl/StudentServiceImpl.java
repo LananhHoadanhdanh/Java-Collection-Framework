@@ -50,7 +50,7 @@ public class StudentServiceImpl extends PersonServiceImpl {
         return studentList.get(index);
     }
 
-    public static Student createStudent() {
+    public static Student createStudent(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập tuổi: ");
         int age = scanner.nextInt();

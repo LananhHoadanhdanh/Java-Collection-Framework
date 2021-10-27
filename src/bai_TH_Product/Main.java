@@ -7,9 +7,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ProductService productList = new ProductService();
-        int choice = -1;
-        while(choice != 0) {
+        while(true) {
+            int choice = -1;
             Scanner scanner = new Scanner(System.in);
+            try {
             System.out.println("Menu");
             System.out.println("1. Thêm phần tử vào danh sách");
             System.out.println("2. In danh sách");
@@ -21,6 +22,9 @@ public class Main {
             System.out.println("0. Kết thúc chương trình");
             System.out.println("Vui lòng lựa chọn: ");
             choice = scanner.nextInt();
+            } catch (Exception ignored) {
+                System.out.println("Nhập số!");
+            }
             switch (choice) {
                 case 1:
                     productList.add(productList.createProduct());

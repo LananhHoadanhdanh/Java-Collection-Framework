@@ -9,16 +9,16 @@ public class FormatList {
 
     public FormatList() {
         formatArrayList = new ArrayList<>();
-        formatArrayList.add(new Format("    d"," decimal integer"," byte, short, int, long"));
-        formatArrayList.add(new Format("    f"," floating-point number"," float, double"));
-        formatArrayList.add(new Format("    b"," Boolean"," Object"));
-        formatArrayList.add(new Format("    B"," will uppercase the boolean"," Object"));
-        formatArrayList.add(new Format("    c"," Character Capital"," String"));
-        formatArrayList.add(new Format("    C"," will uppercase the letter"," String"));
-        formatArrayList.add(new Format("    s"," String Capital"," String"));
-        formatArrayList.add(new Format("    S"," will uppercase all the letters in the string"," String"));
-        formatArrayList.add(new Format("    h"," hashcode - A hashcode is like an address."," Object"));
-        formatArrayList.add(new Format("    n"," newline - Platform specific newline character"," "));
+        formatArrayList.add(new Format("           d"," decimal integer"," byte, short, int, long"));
+        formatArrayList.add(new Format("           f"," floating-point number"," float, double"));
+        formatArrayList.add(new Format("           b"," Boolean"," Object"));
+        formatArrayList.add(new Format("           B"," will uppercase the boolean"," Object"));
+        formatArrayList.add(new Format("           c"," Character Capital"," char"));
+        formatArrayList.add(new Format("           C"," will uppercase the letter"," char"));
+        formatArrayList.add(new Format("           s"," String Capital"," String"));
+        formatArrayList.add(new Format("           S"," will uppercase all the letters in the string"," String"));
+        formatArrayList.add(new Format("           h"," hashcode - A hashcode is like an address."," Object"));
+        formatArrayList.add(new Format("           n"," newline - Platform specific newline character"," "));
     }
 
     public static void printFullLine() {
@@ -30,8 +30,8 @@ public class FormatList {
         printFullLine();
         System.out.printf("|%-22s|%-50s|%-25s|%n", " Conversion-character", " Description", " Type");
         printFullLine();
-        for (int i = 0; i < formatArrayList.size(); i++) {
-            System.out.println(formatArrayList.get(i));
+        for (Format format : formatArrayList) {
+            System.out.println(format);
         }
         printFullLine();
     }

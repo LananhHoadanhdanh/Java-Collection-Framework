@@ -64,16 +64,12 @@ public class MenuService {
         int editId = scanner.nextInt();
         int index = personService.findIndexById(editId);
         if (index != -1) {
-            Person.setId(editId - 1);
             if (personService.getElement(index) instanceof Teacher) {
                 personService.editById(editId, TeacherServiceImpl.createTeacher());
             }
             if (personService.getElement(index) instanceof Student) {
                 personService.editById(editId, StudentServiceImpl.createStudent());
             }
-            Person.setMaxId(Person.getMaxId() - 1);
-            Person.setId(Person.getMaxId());
-
         } else {
             System.out.println("Không có học sinh tương ứng với id này.");
         }

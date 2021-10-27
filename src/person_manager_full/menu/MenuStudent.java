@@ -40,40 +40,44 @@ public class MenuStudent extends MenuService {
     }
     public void menuOption() {
         int choice = -1;
-        while (choice != 0) {
+        while (true) {
             showMenu();
             Scanner scanner = new Scanner(System.in);
-            choice = scanner.nextInt();
-            switch (choice) {
-                case 1:
-                    addObject();
-                    break;
-                case 2:
-                    printObject();
-                    break;
-                case 3:
-                    deleteObject();
-                    break;
-                case 4:
-                    editObject();
-                    break;
-                case 5:
-                    findObject();
-                    break;
-                case 6:
-                    sortIncreaseStudent();
-                    break;
-                case 7:
-                    sortDecreaseStudent();
-                    break;
-                case 8:
-                    System.out.println("Tổng điểm: " + getSumScoreStudent());
-                    break;
-                case 0:
-                    System.exit(0);
-                default:
-                    System.out.println("Không có tùy chọn!");
+            try {
+                choice = scanner.nextInt();
+            } catch (Exception ignored) {
+                System.out.println("Nhập số!");
             }
+                switch (choice) {
+                    case 1:
+                        addObject();
+                        break;
+                    case 2:
+                        printObject();
+                        break;
+                    case 3:
+                        deleteObject();
+                        break;
+                    case 4:
+                        editObject();
+                        break;
+                    case 5:
+                        findObject();
+                        break;
+                    case 6:
+                        sortIncreaseStudent();
+                        break;
+                    case 7:
+                        sortDecreaseStudent();
+                        break;
+                    case 8:
+                        System.out.println("Tổng điểm: " + getSumScoreStudent());
+                        break;
+                    case 0:
+                        System.exit(0);
+                    default:
+                        System.out.println("Không có tùy chọn!");
+                }
         }
     }
 }

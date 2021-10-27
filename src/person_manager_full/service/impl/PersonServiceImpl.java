@@ -22,6 +22,7 @@ public class PersonServiceImpl implements GeneralService<Person> {
 
     @Override
     public void add(Person person) {
+        Person.setId(Person.getId() + 1);
         personList.add(person);
     }
 
@@ -49,6 +50,7 @@ public class PersonServiceImpl implements GeneralService<Person> {
     public void editById(int id, Person person) {
         if (findIndexById(id) != -1) {
             personList.set(findIndexById(id), person);
+            person.setPersonalId(id);
         } else {
             System.out.println("Không có học sinh này.");
         }

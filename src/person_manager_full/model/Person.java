@@ -8,13 +8,9 @@ public class Person {
     public static int maxId = 0;
 
     public Person() {
-        id++;
-        maxId++;
     }
 
     public Person(String name, int age) {
-        id++;
-        maxId++;
         this.personalId = id;
         this.name = name;
         this.age = age;
@@ -50,14 +46,6 @@ public class Person {
 
     public static void setId(int id) {
         Person.id = id;
-    }
-
-    public static int getMaxId() {
-        return maxId;
-    }
-
-    public static void setMaxId(int maxId) {
-        Person.maxId = maxId;
     }
 
     @Override
